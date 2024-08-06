@@ -1,0 +1,140 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4e7d4, #e8c8c8);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    animation: backgroundGradient 10s ease infinite;
+}
+
+@keyframes backgroundGradient {
+    0% { background: linear-gradient(135deg, #f4e7d4, #e8c8c8); }
+    50% { background: linear-gradient(135deg, #e8c8c8, #f4e7d4); }
+    100% { background: linear-gradient(135deg, #f4e7d4, #e8c8c8); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #666;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #bbb; }
+    100% { text-shadow: 0 0 20px #777; }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-column {
+    flex: 1 1 300px;
+    max-width: 40%;
+    margin-right: 20px;
+    animation: imagePop 2s ease-in-out;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes imagePop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.text-column {
+    flex: 2 1 600px;
+    max-width: 55%;
+}
+
+.text-column h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-column p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+    animation: textFadeIn 2s ease;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .image-column, .text-column {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .text-column {
+        margin-top: 20px;
+    }
+}
+.achievements{
+    flex: 1 1 600px;
+    max-width: 55%;
+}
+.image{
+    flex: 1 2 300px;
+    max-width: 40%;
+    margin-right: 20px;
+    animation: imagePop 2s ease-in-out;
+}
+.image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.content2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
